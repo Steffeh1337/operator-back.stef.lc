@@ -2,12 +2,14 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
+use Laravel\Sanctum\HasApiTokens;
 
-class User extends Model
+class Doctor extends Authenticatable
 {
-	use HasFactory;
+	use HasApiTokens, HasFactory, Notifiable;
 
 	/**
 	 * The attributes that are mass assignable.
@@ -19,6 +21,10 @@ class User extends Model
 		'first_name',
 		'phone',
 		'email',
+		'doctor_type',
+		'id_city',
+		'id_clinic',
+		'id_field',
 		'rating',
 		'updated_at',
 	];

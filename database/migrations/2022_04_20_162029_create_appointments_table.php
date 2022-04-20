@@ -24,7 +24,10 @@ return new class extends Migration
 			$table->timestamp('end_date')->nullable();
 			$table->smallInteger('active')->default(1);
 			$table->float('amount', 8, 2);
-			$table->boolean('review_done')->default(false);
+			$table->tinyInteger('review_user_done')->default(0);
+			$table->tinyInteger('review_doctor_done')->default(0);
+			$table->float('review_user', 2, 2);
+			$table->float('review_doctor', 2, 2);
 			$table->timestamps();
 		});
 	}

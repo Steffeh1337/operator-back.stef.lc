@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class User extends Model
+class Review extends Model
 {
 	use HasFactory;
 
@@ -15,12 +15,13 @@ class User extends Model
 	 * @var array<int, string>
 	 */
 	protected $fillable = [
-		'last_name',
-		'first_name',
-		'phone',
-		'email',
+		'id_appointment',
+		'id_user',
+		'id_doctor',
+		'id_clinic',
 		'rating',
-		'updated_at',
+		'comment',
+		'updated_at'
 	];
 
 	/**
@@ -28,17 +29,12 @@ class User extends Model
 	 *
 	 * @var array<int, string>
 	 */
-	protected $hidden = [
-		'password',
-		'remember_token',
-	];
+	protected $hidden = [];
 
 	/**
 	 * The attributes that should be cast.
 	 *
 	 * @var array<string, string>
 	 */
-	protected $casts = [
-		'email_verified_at' => 'datetime',
-	];
+	protected $casts = [];
 }

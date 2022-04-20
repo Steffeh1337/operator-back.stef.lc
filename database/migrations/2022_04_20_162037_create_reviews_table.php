@@ -15,6 +15,7 @@ return new class extends Migration
 	{
 		Schema::create('reviews', function (Blueprint $table) {
 			$table->id();
+			$table->integer('id_appointment');
 			$table->integer('id_user');
 			$table->integer('id_doctor');
 			$table->integer('id_clinic');
