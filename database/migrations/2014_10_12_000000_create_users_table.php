@@ -15,7 +15,7 @@ return new class extends Migration
 	{
 		Schema::create('users', function (Blueprint $table) {
 			$table->id();
-			$table->float('rating', 2, 2);
+			$table->float('rating', 2, 2)->default(0);
 			$table->string('last_name');
 			$table->string('first_name');
 			$table->string('phone');
