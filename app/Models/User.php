@@ -17,10 +17,19 @@ class User extends Model
 	protected $fillable = [
 		'last_name',
 		'first_name',
+		'name',
 		'phone',
+		'international_number',
+		'iso_code',
+		'dial_code',
+		'phone_validated',
 		'email',
-		'rating',
-		'updated_at',
+		'cnp',
+		'ci_serie',
+		'ci_numar',
+		'active',
+		'code',
+		'updated_at'
 	];
 
 	/**

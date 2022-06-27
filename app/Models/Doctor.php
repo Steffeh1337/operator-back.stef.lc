@@ -19,14 +19,23 @@ class Doctor extends Authenticatable implements JWTSubject
 	protected $fillable = [
 		'last_name',
 		'first_name',
+		'name',
+		'active',
 		'phone',
+		'international_number',
+		'dial_code',
+		'iso_code',
 		'email',
+		'cnp',
+		'ci_serie',
+		'ci_numar',
+		'image',
 		'doctor_type',
 		'id_city',
 		'id_clinic',
 		'id_field',
-		'rating',
-		'updated_at',
+		'price',
+		'updated_at'
 	];
 
 	/**

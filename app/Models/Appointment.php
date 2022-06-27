@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Doctor extends Model
+class Appointment extends Model
 {
 	use HasFactory;
 
@@ -24,10 +24,13 @@ class Doctor extends Model
 		'end_date',
 		'active',
 		'amount',
-		'review_done_user',
-		'review_done_doctor',
-		'review_user',
-		'review_doctor'
+		'cancelled_user',
+		'cancelled_user_date',
+		'cancelled_user_obs',
+		'cancelled_doctor',
+		'cancelled_doctor_date',
+		'cancelled_doctor_obs',
+		'updated_at'
 	];
 
 	/**

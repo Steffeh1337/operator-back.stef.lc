@@ -16,10 +16,15 @@ class Review extends Model
 	 */
 	protected $fillable = [
 		'id_appointment',
-		'id_user',
-		'id_doctor',
 		'id_clinic',
-		'rating',
+		'id_user',
+		'done_user',
+		'rating_user',
+		'comment_user',
+		'id_doctor',
+		'done_doctor',
+		'rating_doctor',
+		'comment_doctor',
 		'comment',
 		'updated_at'
 	];
